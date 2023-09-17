@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="670.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.StorageViewController">
+   <children>
+      <Button fx:id="addToStoreButton" layoutX="707.0" layoutY="594.0" mnemonicParsing="false" onAction="#addToStore" prefHeight="60.0" prefWidth="126.0" text="Add to Store" textFill="#2ba223" />
+      <Label layoutX="51.0" layoutY="27.0" text="Storage" />
+      <TableView fx:id="productTable" layoutX="445.0" layoutY="45.0" prefHeight="535.0" prefWidth="423.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="50.4000244140625" text="ID" />
+          <TableColumn fx:id="name" prefWidth="114.39996337890625" text="Name" />
+            <TableColumn fx:id="desc" prefWidth="192.0" text="Description" />
+            <TableColumn fx:id="price" prefWidth="65.5999755859375" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="addProductButton" layoutX="226.0" layoutY="481.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="60.0" prefWidth="134.0" text="Add New Product" textFill="#2813e2" />
+      <Button fx:id="deleteButton" layoutX="530.0" layoutY="594.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="60.0" prefWidth="126.0" text="Delete" textFill="#ed2222" />
+      <Button fx:id="Orders" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" onAction="#checkOrders" prefHeight="61.0" prefWidth="134.0" text="Ordered products" textFill="#b2651e" />
+      <Button fx:id="backButton" layoutX="25.0" layoutY="602.0" mnemonicParsing="false" onAction="#goBack" prefHeight="43.0" prefWidth="135.0" text="Back" />
+      <TextField fx:id="nameF" layoutX="218.0" layoutY="212.0" />
+      <TextField fx:id="descF" layoutX="218.0" layoutY="285.0" />
+      <TextField fx:id="priceF" layoutX="218.0" layoutY="359.0" />
+      <Label layoutX="123.0" layoutY="216.0" text="Product name" />
+      <Label layoutX="136.0" layoutY="289.0" text="Description" />
+      <Label layoutX="166.0" layoutY="363.0" text="Price" />
+      <Label fx:id="error" layoutX="165.0" layoutY="544.0" prefHeight="116.0" prefWidth="282.0" textFill="#e21515">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="consoleLabel" layoutX="131.0" layoutY="428.0" text="Console type" />
+      <TextField fx:id="typeF" layoutX="218.0" layoutY="424.0" />
+      <RadioButton fx:id="radioVideoGame" layoutX="226.0" layoutY="104.0" mnemonicParsing="false" onAction="#radioVideoGame" text="Video Game">
+         <toggleGroup>
+            <ToggleGroup fx:id="productType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radioConsole" layoutX="227.0" layoutY="139.0" mnemonicParsing="false" onAction="#radioConsole" text="Console" toggleGroup="$productType" />
+      <RadioButton fx:id="radioAccess" layoutX="228.0" layoutY="170.0" mnemonicParsing="false" onAction="#radioAccess" text="Accessory" toggleGroup="$productType" />
+      <Label layoutX="220.0" layoutY="73.0" prefHeight="18.0" prefWidth="126.0" text="Create new product" />
+   </children>
+</AnchorPane>

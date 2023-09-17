@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.CustomerDemandViewController">
+   <children>
+      <Button fx:id="backButton" layoutX="28.0" layoutY="523.0" mnemonicParsing="false" onAction="#back" text="exit" />
+      <Button fx:id="sendButton" layoutX="174.0" layoutY="498.0" mnemonicParsing="false" onAction="#sendDemand" prefHeight="50.0" prefWidth="164.0" text="Send demand" />
+      <TextArea fx:id="comment" layoutX="115.0" layoutY="326.0" prefHeight="123.0" prefWidth="279.0" />
+      <TextField fx:id="name" layoutX="183.0" layoutY="64.0" prefHeight="11.0" prefWidth="267.0" promptText="eg.:Cyberpunk 77, Razer mouse 2000, Xbox 360" />
+      <RadioButton fx:id="gameRadio" layoutX="183.0" layoutY="112.0" mnemonicParsing="false" onAction="#radioGame" text="Video Game eg.: World of Warcraft, Fallout">
+         <toggleGroup>
+            <ToggleGroup fx:id="ihatethis" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="consoleRadio" layoutX="184.0" layoutY="145.0" mnemonicParsing="false" onAction="#radioConsole" text="Console eg.: Xbox,PS4,Ninentdo Switch" toggleGroup="$ihatethis" />
+      <RadioButton fx:id="accessoryRadio" layoutX="184.0" layoutY="176.0" mnemonicParsing="false" onAction="#radioAccessory" text="Accessory eg.: Xbox controller, mouse, keyboard" toggleGroup="$ihatethis" />
+      <Label layoutX="28.0" layoutY="112.0" text="Type of product:" />
+      <TextField fx:id="consoleType" layoutX="204.0" layoutY="204.0" prefHeight="26.0" prefWidth="235.0" promptText="eg.:Xbox 360, PS4" />
+      <TextField fx:id="amount" layoutX="351.0" layoutY="243.0" prefHeight="26.0" prefWidth="70.0" promptText="eg.:1,2,5" />
+      <Label fx:id="ctype" layoutX="58.0" layoutY="209.0" text="Console type" />
+      <Label layoutX="72.0" layoutY="68.0" text="Name " />
+      <Label layoutX="58.0" layoutY="248.0" text="Amount" />
+      <Label layoutX="13.0" layoutY="14.0" prefHeight="26.0" prefWidth="488.0" text="Make a demand for a product if you want to see it in our store" textFill="#3a48e8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="117.0" layoutY="450.0" prefHeight="34.0" prefWidth="286.0" />
+      <Label layoutX="14.0" layoutY="294.0" text="When would you like to see this product ?" />
+      <TextField fx:id="arrivalM" layoutX="359.0" layoutY="289.0" prefHeight="26.0" prefWidth="54.0" promptText="month" />
+      <TextField fx:id="arrivalY" layoutX="413.0" layoutY="289.0" prefHeight="26.0" prefWidth="70.0" promptText="year" />
+      <TextField fx:id="arrivalD" layoutX="305.0" layoutY="289.0" prefHeight="26.0" prefWidth="54.0" promptText="day" />
+   </children>
+</AnchorPane>

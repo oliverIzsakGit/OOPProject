@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="574.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.OrdersViewController">
+   <children>
+      <TableView fx:id="orderTable" layoutX="293.0" layoutY="19.0" prefHeight="462.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="160.79998779296875" text="Product name" />
+            <TableColumn fx:id="type" minWidth="0.0" prefWidth="103.20001220703125" text="Type" />
+            <TableColumn fx:id="desc" prefWidth="138.4000244140625" text="Description" />
+            <TableColumn fx:id="amount" prefWidth="58.4000244140625" text="Amount" />
+          <TableColumn fx:id="price" prefWidth="53.59991455078125" text="Price" />
+            <TableColumn fx:id="arrival" prefWidth="76.00006103515625" text="Arrival" />
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" prefHeight="38.0" prefWidth="215.0" text="Orders in proccess:" textFill="#2713bd">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="deleteButton" layoutX="293.0" layoutY="500.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="48.0" prefWidth="112.0" text="Delete" textFill="#ed0b0b" />
+      <Button fx:id="exitButton" layoutX="18.0" layoutY="500.0" mnemonicParsing="false" onAction="#exit" prefHeight="48.0" prefWidth="102.0" text="Exit" />
+      <Button fx:id="addOrder" layoutX="135.0" layoutY="500.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="48.0" prefWidth="121.0" text="Add new order" textFill="#0c1ee8" />
+      <TextField fx:id="nameF" layoutX="59.0" layoutY="62.0" promptText="Product name" />
+      <TextField fx:id="typeF" layoutX="59.0" layoutY="196.0" promptText="Console Type" />
+      <TextField fx:id="amountF" layoutX="60.0" layoutY="364.0" prefHeight="26.0" prefWidth="149.0" promptText="Amount" />
+      <TextField fx:id="priceF" layoutX="61.0" layoutY="398.0" promptText="Price" />
+      <TextField fx:id="arrivalD" layoutX="61.0" layoutY="431.0" prefHeight="26.0" prefWidth="48.0" promptText="day" />
+      <Label fx:id="error" layoutX="427.0" layoutY="515.0" prefHeight="27.0" prefWidth="283.0" text="Here you can add a new order" textFill="#d22a2a">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="arrivalM" layoutX="109.0" layoutY="431.0" prefHeight="26.0" prefWidth="49.0" promptText="month" />
+      <TextField fx:id="arrivalY" layoutX="159.0" layoutY="431.0" prefHeight="26.0" prefWidth="50.0" promptText="year" />
+      <Button fx:id="addToStorageButton" layoutX="756.0" layoutY="501.0" mnemonicParsing="false" onAction="#addToStorage" prefHeight="48.0" prefWidth="128.0" text="Add To Storage" textFill="#14c711" />
+      <TextArea fx:id="descF" layoutX="33.0" layoutY="232.0" prefHeight="124.0" prefWidth="204.0" promptText="Description" />
+      <RadioButton fx:id="consoleRadio" layoutX="64.0" layoutY="104.0" mnemonicParsing="false" onAction="#consoleRadioOn" text="Console">
+         <toggleGroup>
+            <ToggleGroup fx:id="radios" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="videoGameRadio" layoutX="64.0" layoutY="135.0" mnemonicParsing="false" onAction="#videoGameRadioOn" text="Video Game" toggleGroup="$radios" />
+      <RadioButton fx:id="accessoryRadio" layoutX="65.0" layoutY="167.0" mnemonicParsing="false" onAction="#accessoryRadioOn" text="Accessory" toggleGroup="$radios" />
+   </children>
+</AnchorPane>
